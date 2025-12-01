@@ -1,0 +1,97 @@
+[0m[[0m[31merror[0m] [0m[0mC:\proj\financial-streaming-pipeline\flink-jobs\src\main\scala\com\financial\streaming\MarketDataProcessor.scala:8:25: object table is not a member of package org.apache.flink[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.apache.flink.table.api._[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\proj\financial-streaming-pipeline\flink-jobs\src\main\scala\com\financial\streaming\MarketDataProcessor.scala:9:25: object table is not a member of package org.apache.flink[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.apache.flink.table.api.bridge.scala._[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\proj\financial-streaming-pipeline\flink-jobs\src\main\scala\com\financial\streaming\AnomalyDetector.scala:449:33: not found: type ProcessFunction[0m
+[0m[[0m[31merror[0m] [0m[0m  class AnomalyEnricher extends ProcessFunction[MarketAnomaly, MarketAnomaly] {[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\proj\financial-streaming-pipeline\flink-jobs\src\main\scala\com\financial\streaming\AnomalyDetector.scala:452:12: not found: type ProcessFunction[0m
+[0m[[0m[31merror[0m] [0m[0m      ctx: ProcessFunction[MarketAnomaly, MarketAnomaly]#Context,[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\proj\financial-streaming-pipeline\flink-jobs\src\main\scala\com\financial\streaming\MarketDataProcessor.scala:43:20: not found: value StreamTableEnvironment[0m
+[0m[[0m[31merror[0m] [0m[0m    val tableEnv = StreamTableEnvironment.create(env)[0m
+[0m[[0m[31merror[0m] [0m[0m                   ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\proj\financial-streaming-pipeline\flink-jobs\src\main\scala\com\financial\streaming\MarketDataProcessor.scala:71:12: missing argument list for method parseMarketData in object MarketDataIcebergProcessor[0m
+[0m[[0m[31merror[0m] [0m[0mUnapplied methods are only converted to functions when a function type is expected.[0m
+[0m[[0m[31merror[0m] [0m[0mYou can make this conversion explicit by writing `parseMarketData _` or `parseMarketData(_)` instead of `parseMarketData`.[0m
+[0m[[0m[31merror[0m] [0m[0m      .map(parseMarketData)[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\proj\financial-streaming-pipeline\flink-jobs\src\main\scala\com\financial\streaming\UnifiedMarketProcessor.scala:10:25: object table is not a member of package org.apache.flink[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.apache.flink.table.api.bridge.scala._[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\proj\financial-streaming-pipeline\flink-jobs\src\main\scala\com\financial\streaming\UnifiedMarketProcessor.scala:11:25: object table is not a member of package org.apache.flink[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.apache.flink.table.api._[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\proj\financial-streaming-pipeline\flink-jobs\src\main\scala\com\financial\streaming\UnifiedMarketProcessor.scala:12:30: object models is not a member of package com.finance.streaming[0m
+[0m[[0m[31merror[0m] [0m[0mimport com.finance.streaming.models._[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\proj\financial-streaming-pipeline\flink-jobs\src\main\scala\com\financial\streaming\UnifiedMarketProcessor.scala:13:30: object processors is not a member of package com.finance.streaming[0m
+[0m[[0m[31merror[0m] [0m[0mimport com.finance.streaming.processors._[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\proj\financial-streaming-pipeline\flink-jobs\src\main\scala\com\financial\streaming\UnifiedMarketProcessor.scala:35:20: not found: value StreamTableEnvironment[0m
+[0m[[0m[31merror[0m] [0m[0m    val tableEnv = StreamTableEnvironment.create(env)[0m
+[0m[[0m[31merror[0m] [0m[0m                   ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\proj\financial-streaming-pipeline\flink-jobs\src\main\scala\com\financial\streaming\UnifiedMarketProcessor.scala:116:41: not found: type StreamTableEnvironment[0m
+[0m[[0m[31merror[0m] [0m[0m  def configureIcebergCatalog(tableEnv: StreamTableEnvironment): Unit = {[0m
+[0m[[0m[31merror[0m] [0m[0m                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\proj\financial-streaming-pipeline\flink-jobs\src\main\scala\com\financial\streaming\UnifiedMarketProcessor.scala:134:37: not found: type StreamTableEnvironment[0m
+[0m[[0m[31merror[0m] [0m[0m  def createIcebergTables(tableEnv: StreamTableEnvironment): Unit = {[0m
+[0m[[0m[31merror[0m] [0m[0m                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\proj\financial-streaming-pipeline\flink-jobs\src\main\scala\com\financial\streaming\UnifiedMarketProcessor.scala:61:12: missing argument list for method parseMarketData in object UnifiedMarketProcessor[0m
+[0m[[0m[31merror[0m] [0m[0mUnapplied methods are only converted to functions when a function type is expected.[0m
+[0m[[0m[31merror[0m] [0m[0mYou can make this conversion explicit by writing `parseMarketData _` or `parseMarketData(_)` instead of `parseMarketData`.[0m
+[0m[[0m[31merror[0m] [0m[0m      .map(parseMarketData)[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\proj\financial-streaming-pipeline\flink-jobs\src\main\scala\com\financial\streaming\UnifiedMarketProcessor.scala:223:39: not found: type StreamTableEnvironment[0m
+[0m[[0m[31merror[0m] [0m[0m  def writeRawDataToIceberg(tableEnv: StreamTableEnvironment, stream: DataStream[MarketTick]): Unit = {[0m
+[0m[[0m[31merror[0m] [0m[0m                                      ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\proj\financial-streaming-pipeline\flink-jobs\src\main\scala\com\financial\streaming\UnifiedMarketProcessor.scala:72:22: not found: type MarketAggregator[0m
+[0m[[0m[31merror[0m] [0m[0m      .aggregate(new MarketAggregator())[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\proj\financial-streaming-pipeline\flink-jobs\src\main\scala\com\financial\streaming\UnifiedMarketProcessor.scala:234:44: not found: type StreamTableEnvironment[0m
+[0m[[0m[31merror[0m] [0m[0m  def writeAggregationsToIceberg(tableEnv: StreamTableEnvironment, stream: DataStream[MarketAggregate]): Unit = {[0m
+[0m[[0m[31merror[0m] [0m[0m                                           ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\proj\financial-streaming-pipeline\flink-jobs\src\main\scala\com\financial\streaming\UnifiedMarketProcessor.scala:234:87: not found: type MarketAggregate[0m
+[0m[[0m[31merror[0m] [0m[0m  def writeAggregationsToIceberg(tableEnv: StreamTableEnvironment, stream: DataStream[MarketAggregate]): Unit = {[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                      ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\proj\financial-streaming-pipeline\flink-jobs\src\main\scala\com\financial\streaming\UnifiedMarketProcessor.scala:79:28: not found: value VolatilityProcessor[0m
+[0m[[0m[31merror[0m] [0m[0m    val volatilityStream = VolatilityProcessor.calculate(marketStream)[0m
+[0m[[0m[31merror[0m] [0m[0m                           ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\proj\financial-streaming-pipeline\flink-jobs\src\main\scala\com\financial\streaming\UnifiedMarketProcessor.scala:246:42: not found: type StreamTableEnvironment[0m
+[0m[[0m[31merror[0m] [0m[0m  def writeVolatilityToIceberg(tableEnv: StreamTableEnvironment, stream: DataStream[VolatilityMetrics]): Unit = {[0m
+[0m[[0m[31merror[0m] [0m[0m                                         ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\proj\financial-streaming-pipeline\flink-jobs\src\main\scala\com\financial\streaming\UnifiedMarketProcessor.scala:84:25: not found: value AnomalyProcessor[0m
+[0m[[0m[31merror[0m] [0m[0m    val anomalyStream = AnomalyProcessor.detect(marketStream)[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\proj\financial-streaming-pipeline\flink-jobs\src\main\scala\com\financial\streaming\UnifiedMarketProcessor.scala:258:41: not found: type StreamTableEnvironment[0m
+[0m[[0m[31merror[0m] [0m[0m  def writeAnomaliesToIceberg(tableEnv: StreamTableEnvironment, stream: DataStream[MarketAnomaly]): Unit = {[0m
+[0m[[0m[31merror[0m] [0m[0m                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\proj\financial-streaming-pipeline\flink-jobs\src\main\scala\com\financial\streaming\UnifiedMarketProcessor.scala:89:28: not found: value TechnicalIndicatorProcessor[0m
+[0m[[0m[31merror[0m] [0m[0m    val indicatorsStream = TechnicalIndicatorProcessor.calculate(marketStream)[0m
+[0m[[0m[31merror[0m] [0m[0m                           ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\proj\financial-streaming-pipeline\flink-jobs\src\main\scala\com\financial\streaming\UnifiedMarketProcessor.scala:270:42: not found: type StreamTableEnvironment[0m
+[0m[[0m[31merror[0m] [0m[0m  def writeIndicatorsToIceberg(tableEnv: StreamTableEnvironment, stream: DataStream[TechnicalIndicators]): Unit = {[0m
+[0m[[0m[31merror[0m] [0m[0m                                         ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\proj\financial-streaming-pipeline\flink-jobs\src\main\scala\com\financial\streaming\UnifiedMarketProcessor.scala:270:85: not found: type TechnicalIndicators[0m
+[0m[[0m[31merror[0m] [0m[0m  def writeIndicatorsToIceberg(tableEnv: StreamTableEnvironment, stream: DataStream[TechnicalIndicators]): Unit = {[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\proj\financial-streaming-pipeline\flink-jobs\src\main\scala\com\financial\streaming\UnifiedMarketProcessor.scala:107:9: not found: value messageType[0m
+[0m[[0m[31merror[0m] [0m[0m        messageType = d.obj.get("message_type").map(_.str).getOrElse("trade")[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\proj\financial-streaming-pipeline\flink-jobs\src\main\scala\com\financial\streaming\UnifiedMarketProcessor.scala:283:26: not found: type MarketAggregate[0m
+[0m[[0m[31merror[0m] [0m[0m  def formatAggregate(a: MarketAggregate): String =[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\proj\financial-streaming-pipeline\flink-jobs\src\main\scala\com\financial\streaming\VolatilityCalculator.scala:405:38: not found: type CoFlatMapFunction[0m
+[0m[[0m[31merror[0m] [0m[0mclass MultiTimeframeCombiner extends CoFlatMapFunction[VolatilityMetrics, VolatilityMetrics, MultiTimeframeVolatility] {[0m
+[0m[[0m[31merror[0m] [0m[0m                                     ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\proj\financial-streaming-pipeline\flink-jobs\src\main\scala\com\financial\streaming\VolatilityCalculator.scala:92:16: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : com.finance.streaming.MultiTimeframeCombiner[0m
+[0m[[0m[31merror[0m] [0m[0m required: org.apache.flink.streaming.api.functions.co.CoFlatMapFunction[com.finance.streaming.VolatilityMetrics,com.finance.streaming.VolatilityMetrics,com.finance.streaming.MultiTimeframeVolatility][0m
+[0m[[0m[31merror[0m] [0m[0m      .flatMap(new MultiTimeframeCombiner())[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\proj\financial-streaming-pipeline\flink-jobs\src\main\scala\com\financial\streaming\VolatilityCalculator.scala:103:18: reassignment to val[0m
+[0m[[0m[31merror[0m] [0m[0m      acc.symbol = tick.symbol[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m30 errors found[0m

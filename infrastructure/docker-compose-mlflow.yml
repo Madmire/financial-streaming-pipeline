@@ -1,0 +1,76 @@
+version: "3.9"
+
+services:
+  # ==================== MLFLOW BACKEND DB ====================
+  mlflow-db:
+    image: postgres:14-alpine
+    container_name: mlflow-db
+    networks:
+      - financial-streaming
+    environment:
+      POSTGRES_USER: mlflow
+      POSTGRES_PASSWORD: mlflow123
+      POSTGRES_DB: mlflow_db
+    volumes:
+      - ./mlflow-data/postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "mlflow"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ==================== MLFLOW SERVER ====================
+  mlflow:
+    image: python:3.10-slim
+    container_name: mlflow-server
+    networks:
+      - financial-streaming
+    ports:
+      - "5000:5000"
+    environment:
+      MLFLOW_BACKEND_STORE_URI: postgresql://mlflow:mlflow123@mlflow-db:5432/mlflow_tracking_db
+      MLFLOW_ARTIFACT_ROOT: s3://mlflow-artifacts
+      AWS_ACCESS_KEY_ID: admin
+      AWS_SECRET_ACCESS_KEY: password123
+      MLFLOW_S3_ENDPOINT_URL: http://minio:9000
+    depends_on:
+      mlflow-db:
+        condition: service_healthy
+    command: >
+      sh -c "
+      apt-get update && apt-get install -y curl &&
+      pip install mlflow==2.9.2 psycopg2-binary boto3 &&
+      mlflow server --host 0.0.0.0 --port 5000
+      "
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import requests; requests.get('http://localhost:5000', timeout=5)"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+
+  # ==================== JUPYTER NOTEBOOK ====================
+  jupyter:
+    image: jupyter/scipy-notebook:latest
+    container_name: jupyter-ml
+    networks:
+      - financial-streaming
+    ports:
+      - "8888:8888"
+    environment:
+      JUPYTER_ENABLE_LAB: "yes"
+      GRANT_SUDO: "yes"
+    volumes:
+      - ./ml-notebooks:/home/jovyan/work
+      - ./ml-models:/home/jovyan/models
+    command: start-notebook.sh --NotebookApp.token='' --NotebookApp.password=''
+    depends_on:
+      - mlflow
+      #- trino
+
+networks:
+  financial-streaming:
+    name: financial-streaming
+    driver: bridge
+
+volumes:
+  mlflow-postgres-data:
